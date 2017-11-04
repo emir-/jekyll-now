@@ -18,7 +18,11 @@ from the winter in 2013 up to the spring and early days of summer.
 What resulted from that period was what other than a very simple video game
 written in JavaScript.
 
-## First steps
+Since then I haven't had the chance to do anything more except maybe for some
+fooling around with Unity, but I'd thought it would be interesting to write
+about that little aspect of my life.
+
+# First steps
 
 When I was finishing up university one of my favorite projects was a game I
 built together with a colleague for a Human Computer Interaction Class.
@@ -31,5 +35,6 @@ We used it for many different projects and it was the first environment where I
 started learning about some of the basics of game development at the time. This
 was probably around 2010-2011. 
 
+## Going back even more
 
 
