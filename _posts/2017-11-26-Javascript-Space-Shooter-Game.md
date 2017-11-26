@@ -1,7 +1,7 @@
 ---
 layout: post
 categories: [games, development, javascript, engine, 2d, shooter, space]
-title: The JavasScript Space Shooter Game!
+title: The JavasScript Space Shooter Game from 2013!
 author: emir_osmanoski
 comments: true
 ---
@@ -84,7 +84,7 @@ with jQuery as a support for implementing the simple game UI.
 So without any further delay:
 
 <h2 markdown="1" class="text-center">
-<a href="https://github.com/emir01/Html5-2d-SpaceShooter" target="_blank">The Code.</a>
+<a href="https://github.com/emir01/Html5-2d-SpaceShooter" target="_blank">The Code</a>
 </h2>
 
 
