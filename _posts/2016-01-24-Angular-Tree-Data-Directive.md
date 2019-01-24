@@ -64,23 +64,25 @@ In a way it is using a sort of recursion to render the hierarchy:
 </ul>
 
 <script type="text/ng-template" id="itemTree">
-    <div class="item" data-ng-class="vm.ItemClass(item)" >
-        <div class="item_collapse"
-             data-ng-click="vm.SetChildrenVisibleState(item)"
-             data-ng-show="vm.HasChildren(item)">
-            {{vm.ItemChildrenStateIndicator(item)}}
+<div class="item" data-ng-class="vm.ItemClass(item)" >
+    <div class="item_collapse"
+            data-ng-click="vm.SetChildrenVisibleState(item)"
+            data-ng-show="vm.HasChildren(item)">
+        {% raw %}
+        {{vm.ItemChildrenStateIndicator(item)}}
+        {% endraw %}
         </div>
-        <div class="item_text" data-ng-click="vm.ItemClickHandler(item)">
-            {{item[vm.displayPropertyName]}}
-        </div>
+    <div class="item_text" data-ng-click="vm.ItemClickHandler(item)">
+        {% raw %}
+        {{item[vm.displayPropertyName]}}
+        {% endraw %}
     </div>
+</div>
 
-    <ul data-ng-show="vm.AreChildrenVisible(item)" 
-    	ng-if="item[vm.childrenPropertyName]">
-        	<li data-ng-repeat="item in item[vm.childrenPropertyName] | stateNotDeleted" 
-        		ng-include="'itemTree'">
-        	</li>
-    </ul>
+<ul data-ng-show="vm.AreChildrenVisible(item)" ng-if="item[vm.childrenPropertyName]">
+    <li data-ng-repeat="item in item[vm.childrenPropertyName] | stateNotDeleted" ng-include="'itemTree'">
+    </li>
+</ul>
 </script>
 ```
 
@@ -381,7 +383,7 @@ The HTML where this is called can be seen in the following block of code:
 <h3>Click on a name to select a category </h3>
   
 <div class="row">
-	<div class="col-xs-6">
+    <div class="col-xs-6">
     	<tree-data 
 		      	data="vm.data"
 		      	mark="true"
@@ -397,8 +399,10 @@ The HTML where this is called can be seen in the following block of code:
   	<div class="col-xs-6" >
 	  	<div class="component-row" data-ng-show="vm.categorySelected">
 		  	<h3 >
-			  	Category Selected:
-			  	{{vm.selectedCategory.Name}}
+                  Category Selected:
+                  {% raw %}
+                  {{vm.selectedCategory.Name}}
+                  {% endraw %}
 		  	</h3>
 		  	<div class="component-row">
 		  		<button class="btn btn-danger" 
